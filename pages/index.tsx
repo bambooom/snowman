@@ -49,7 +49,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
           />
         )}
         <div className="columns-2 gap-6 sm:columns-3 xl:columns-4 2xl:columns-5">
-          <div className="after:content relative mb-5 flex flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-white/20 px-6 py-10 text-center text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
+          <div className="after:content relative mb-5 flex flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-white/20 px-4 py-6 sm:px-6 sm:py-10 text-center text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
             {/* <div className="absolute inset-0 flex items-center justify-center opacity-20">
               <span className="flex max-h-full max-w-full items-center justify-center">
                 <Bridge />
@@ -57,7 +57,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               <span className="absolute left-0 right-0 bottom-0 h-[400px] bg-gradient-to-b from-black/0 via-black to-black"></span>
             </div> */}
             <Logo />
-            <h1 className="mt-8 mb-4 text-base font-bold uppercase tracking-widest">
+            <h1 className="mt-4 mb-4 text-sm sm:text-base font-bold uppercase tracking-tight sm:tracking-widest">
               Logo Gallery
             </h1>
             <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
