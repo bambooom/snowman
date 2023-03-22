@@ -10,7 +10,7 @@ class MyDocument extends Document {
             name="description"
             content="Logo art from Snow Man"
           />
-          <meta property="og:site_name" content="nextjsconf-pics.vercel.app" />
+          <meta property="og:site_name" content="snowman-logo.vercel.app" />
           <meta
             property="og:description"
             content="Logo art from Snow Man"
