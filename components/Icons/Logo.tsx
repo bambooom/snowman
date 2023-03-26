@@ -1,7 +1,7 @@
-export default function Logo() {
+export default function Logo({className = ''}) {
   return (
     <svg
-      className="w-full"
+      className={'w-full ' + className}
       aria-labelledby="logo-title-header"
       fill="none"
       role="img"
