@@ -13,8 +13,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Component {...pageProps} />
       <footer className="sticky left-0 bottom-0 p-6 flex items-center justify-center flex-col sm:flex-row gap-4 text-white/80 sm:p-12">
-        <span>From a Snow Man Fan</span>
-        <span>© <a className='underline decoration-pink-500' href="https://zhuzi.dev/" target='_blank'>Zhuzi</a></span>
+        <div>Made by a Snow Man Fan
+          <span className='ml-4'>© <a className='underline decoration-pink-500' href="https://zhuzi.dev/" target='_blank'>Zhuzi</a></span>
+        </div>
         <a href="https://www.buymeacoffee.com/zhuzi" target="_blank">
           <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style={{
             height: '35px !important',
