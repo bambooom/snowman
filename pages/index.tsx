@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 import { useEffect, useRef } from 'react'
+import createSnow from '../utils/snowfall'
 import Logo from '../components/Icons/Logo'
 
 const snsList = [
@@ -46,6 +47,10 @@ const snsList = [
 ];
 
 const Home: NextPage = () => {
+  const snowfall = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    createSnow(30, snowfall.current);
+  });
 
   return (
     <>
@@ -67,13 +72,14 @@ const Home: NextPage = () => {
             <Link
               key={index}
               href={sns.href}
-              className="flex items-center justify-center gap-2 p-2 rounded-md text-white"
+              className="flex items-center justify-center gap-2 p-2 rounded-md text-white opacity-70 hover:opacity-100"
             >
               <img className='w-16 h-16' src={sns.icon} alt={sns.label + ' ' + sns.name} />
               <span>{ sns.label }</span>
             </Link>
           ))}
         </div>
+        <div id="snowfall-container" ref={snowfall}></div>
       </main>
     </>
   )
