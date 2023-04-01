@@ -8,6 +8,7 @@
   }
 }
 
+/* snowfall animation */
 @keyframes fall {
   0% {
     opacity: 0;
@@ -46,6 +47,7 @@
   top: 0;
   transition: opacity 500ms;
   width: 100%;
+  z-index: -1;
 }
 
 .snow {

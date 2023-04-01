@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 import createSnow from '../utils/snowfall'
 import Logo from '../components/Icons/Logo'
+import homeStyle from '../styles/Home.module.css';
 
 const snsList = [
   {
@@ -49,7 +50,7 @@ const snsList = [
 const Home: NextPage = () => {
   const snowfall = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    createSnow(30, snowfall.current);
+    createSnow(15, snowfall.current);
   });
 
   return (
@@ -66,6 +67,9 @@ const Home: NextPage = () => {
         />
       </Head>
       <main className="mx-auto max-w-[1960px] p-4 flex flex-col justify-center items-center" style={{ minHeight: 'calc(100vh - 140px)' }}>
+        <div className='max-w-2xl flex flex-wrap justify-center items-center'>
+          <Link href="/logo" className={homeStyle.text_radient_animation}>LOGOS</Link>
+        </div>
         <Logo className="mb-10" />
         <div className="max-w-2xl flex flex-wrap justify-center items-center gap-4">
           {snsList.map((sns, index) => (
