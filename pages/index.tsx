@@ -1,3 +1,4 @@
+import Lottie from 'lottie-web';
 import type { NextPage } from 'next'
 import Head from 'next/head'
 // import Image from 'next/image'
@@ -51,6 +52,13 @@ const Home: NextPage = () => {
   const snowfall = useRef<HTMLDivElement>(null);
   useEffect(() => {
     createSnow(15, snowfall.current);
+    Lottie.loadAnimation({
+      container: document.querySelector('.idome-logo'),
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: '/idome.json'
+    });
   });
 
   return (
@@ -71,6 +79,7 @@ const Home: NextPage = () => {
           <Link href="/logo" className={homeStyle.text_radient_animation}>LOGOS</Link>
         </div>
         <Logo className="mb-10" />
+        {/* ===== sns list ===== */}
         <div className="max-w-2xl flex flex-wrap justify-center items-center gap-4">
           {snsList.map((sns, index) => (
             <Link
@@ -83,6 +92,13 @@ const Home: NextPage = () => {
             </Link>
           ))}
         </div>
+        {/* ===== sns list ===== */}
+        {/* ===== some special site ===== */}
+        <div>
+          <Link href="/idome"><div className='idome-logo'></div></Link>
+        </div>
+        {/* ===== some special site ===== */}
+
         <div id="snowfall-container" ref={snowfall}></div>
       </main>
     </>
