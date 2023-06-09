@@ -57,7 +57,7 @@ const Home: NextPage = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      path: '/idome.json'
+      path: '/idome/idome.json'
     });
   });
 
