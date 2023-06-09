@@ -55,3 +55,7 @@
   color: white;
   position: absolute;
 }
+
+.main-container {
+  min-height: calc(100vh - 140px);
+}

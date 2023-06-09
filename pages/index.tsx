@@ -74,7 +74,7 @@ const Home: NextPage = () => {
           content="https://snowman-logo.vercel.app/og-image.jpg"
         />
       </Head>
-      <main className="mx-auto max-w-[1960px] p-4 flex flex-col justify-center items-center" style={{ minHeight: 'calc(100vh - 140px)' }}>
+      <main className="home-page main-container mx-auto max-w-[1960px] p-4 flex flex-col justify-center items-center">
         <div className='max-w-2xl flex flex-wrap justify-center items-center'>
           <Link href="/logo" className={homeStyle.text_radient_animation}>LOGOS</Link>
         </div>

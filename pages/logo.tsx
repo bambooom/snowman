@@ -39,7 +39,7 @@ const LogoGallery: NextPage = ({ images }: { images: ImageProps[] }) => {
           content="https://snowman-logo.vercel.app/og-image.jpg"
         />
       </Head>
-      <main className="mx-auto max-w-[1960px] p-4">
+      <main className="logos-page mx-auto max-w-[1960px] p-4 main-container">
         {photoId && (
           <Modal
             images={images}
