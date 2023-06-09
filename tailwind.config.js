@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        dark: '#101315',
+      },
       boxShadow: {
         highlight: 'inset 0 0 0 1px rgba(255, 255, 255, 0.1)',
       },
@@ -21,4 +24,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

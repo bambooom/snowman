@@ -27,7 +27,7 @@ class MyDocument extends Document {
             content="Logo art from Snow Man"
           />
         </Head>
-        <body className="bg-black antialiased">
+        <body className="bg-dark antialiased">
           <Main />
           <NextScript />
         </body>
