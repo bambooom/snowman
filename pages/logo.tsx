@@ -50,7 +50,7 @@ const LogoGallery: NextPage = ({ images }: { images: ImageProps[] }) => {
         )}
         <div className="columns-2 gap-6 sm:columns-3 xl:columns-4 2xl:columns-5">
           <div className="after:content relative mb-5 flex flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-white/20 px-4 py-6 sm:px-6 sm:py-10 text-center text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
-            <Logo />
+            <Link href="/"><Logo /></Link>
             <h1 className="mt-4 mb-4 text-sm sm:text-base font-bold uppercase tracking-tight sm:tracking-widest">
               Logo Gallery
             </h1>
