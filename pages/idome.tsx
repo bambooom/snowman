@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { ChangeEvent, useState } from 'react'
+import GeneratorPreview from '../components/GeneratorPreview'
 import IdomeStyle from '../styles/Idome.module.css';
 
 const IdomePage: NextPage = () => {
-
   const members = [
     {
       key: 'abe',
@@ -52,6 +53,12 @@ const IdomePage: NextPage = () => {
     },
   ];
 
+  const [member, setMember] = useState<{ key?: string, src?: string, color?: string }>({});
+  const handleChangeMember = (e: ChangeEvent<HTMLInputElement>) => {
+    const key = e.target.value;
+    setMember(members.find(v => v.key === key));
+  };
+
   return (
     <>
       <Head>
@@ -83,15 +90,22 @@ const IdomePage: NextPage = () => {
               <div className={IdomeStyle.generator_label}>メンバーカラーを選ぼう</div>
               <div className={IdomeStyle.generator_member_list}>
                 <div className="flex flex-wrap gap-6">
-                  {members.map((member, index) => (
+                  {members.map((mem, index) => (
                     <div key={index} className={'w-20 h-20 ' + IdomeStyle.generator_member_item}>
-                      <input type="radio" name="member" value={member.key} id={member.key} className='hidden'/>
+                      <input
+                        id={mem.key}
+                        type="radio"
+                        value={mem.key}
+                        onChange={handleChangeMember}
+                        className='hidden'
+                        checked={member && member.key === mem.key}
+                      />
                       <label
-                        htmlFor={member.key}
+                        htmlFor={mem.key}
                         className='block relative cursor-pointer w-20 h-20'
-                        style={{ "--checked-color": member.color } as React.CSSProperties}
+                        style={{ "--checked-color": mem.color } as React.CSSProperties}
                       >
-                        <img src={member.src} />
+                        <img src={mem.src} />
                       </label>
                     </div>
                   ))}
@@ -104,8 +118,8 @@ const IdomePage: NextPage = () => {
                 minLength={1} maxLength={15} size={30}
                 placeholder='英字15文字以内で入力してください' />
             </div>
-            <div className='canvas-preview w-1/2'>
-
+            <div className='canvas-preview w-1/2 flex justify-center items-center'>
+              <GeneratorPreview color={member?.color}/>
             </div>
           </div>
         </div>
