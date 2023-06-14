@@ -65,13 +65,13 @@ const IdomePage: NextPage = () => {
           content="https://snowman-logo.vercel.app/og-image.jpg"
         />
       </Head>
-      <main className='idome-page main-container'>
+      <main className='idome-page main-container flex justify-center items-center'>
         <div className={IdomeStyle.idome_word}></div>
         <div className='fixed top-0 left-0 w-full h-full bg-dark' style={{ height: 'calc(100vh - 140px)' }}>
           <div className={IdomeStyle.bg_object}></div>
           <div className={IdomeStyle.bg_text}></div>
         </div>
-        <div className='p-8 bg-dark/90 relative my-8 mx-12 rounded-2xl text-slate-50'>
+        <div className='p-8 bg-dark/90 relative w-4/5 my-8 mx-12 rounded-2xl text-slate-50'>
           <div className='flex items-center justify-center'>
             <div className='generator-ops flex flex-col items-center justify-center gap-5 w-1/2'>
               <div className={IdomeStyle.generator_hashtag}>
