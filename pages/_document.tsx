@@ -28,7 +28,7 @@ class MyDocument extends Document {
           />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-          <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@500&family=Oswald:wght@600&display=swap" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@500&family=Oswald:wght@600&family=Yeseva+One&display=swap" rel="stylesheet"/>
         </Head>
         <body className="bg-dark antialiased">
           <Main />

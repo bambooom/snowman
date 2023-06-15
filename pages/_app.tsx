@@ -13,7 +13,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Component {...pageProps} />
       <footer className="sticky left-0 bottom-0 p-6 flex items-center justify-center flex-col sm:flex-row gap-4 text-white/80 sm:p-12 bg-gradient-to-b from-transparent to-dark">
-        <div>Made by a Snow Man Fan
+        <div>team Snow Man ⛄️
           <span className='ml-4'>© <a className='underline decoration-pink-500' href="https://zhuzi.dev/" target='_blank'>Zhuzi</a></span>
         </div>
         <a href="https://www.buymeacoffee.com/zhuzi" target="_blank">

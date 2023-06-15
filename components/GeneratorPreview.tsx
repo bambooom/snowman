@@ -1,4 +1,5 @@
 // import { Stage, Layer, Rect, Image } from 'react-konva';
+import Style from './GeneratorPreview.module.css';
 
 export default function GeneratorPreview({
   color,
@@ -14,8 +15,10 @@ export default function GeneratorPreview({
       background: color || 'linear-gradient(to right, #a986f8, #c882e7, #de80d5, #ed81c4, #f585b4)',
     }}>
       <img src="/logo.svg" className="w-20 mt-4 ml-5" />
-
-      <div className="absolute bottom-8">{title}</div>
+      <div className={Style.title_container}>
+        <div className={Style.title_text}>DOME</div>
+      </div>
+      <div className="absolute left-[90px] bottom-8 mx-auto w-[220px] h-9 bg-black">{input}</div>
     </div>
   )
   // return (

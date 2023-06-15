@@ -1,0 +1,14 @@
+.title_container {
+  /* rotate 让标题旋转90度，translate 微调字体位置 */
+  transform: rotate(-90deg) translate(-10px, 4px);
+  perspective: 500px;
+}
+
+.title_text {
+  font-family: 'Yeseva One';
+  color: black;
+  transform: rotateY(64deg);
+  font-size: 12rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
