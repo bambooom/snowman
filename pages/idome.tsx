@@ -1,63 +1,80 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { ChangeEvent, useState } from 'react'
+import  type { Member} from '../utils/types'
 import GeneratorPreview from '../components/GeneratorPreview'
 import IdomeStyle from '../styles/Idome.module.css';
+import memberPics from '../public/idome/member.json';
 
 const IdomePage: NextPage = () => {
-  const members = [
+  const members: Member[] = [
     {
       key: 'abe',
       src: '/idome/img_abe-small.webp',
       color: '#6bba41',
+      pic: memberPics['abe'],
     },
     {
       key: 'iwamoto',
       src: '/idome/img_iwamoto-small.webp',
       color: '#feea45',
+      pic: memberPics['iwamote'],
     },
     {
       key: 'fukazawa',
       src: '/idome/img_fukazawa-small.webp',
       color: '#7f52e5',
+      pic: memberPics['fukazawa'],
     },
     {
       key: 'mukai',
       src: '/idome/img_mukai-small.webp',
       color: '#ff842b',
+      pic: memberPics['mukai'],
     },
     {
       key: 'raul',
       src: '/idome/img_raul-small.webp',
       color: '#fff',
+      pic: memberPics['raul'],
     },
     {
       key: 'watanabe',
       src: '/idome/img_watanabe-small.webp',
       color: '#459be2',
+      pic: memberPics['watanabe'],
     },
     {
       key: 'miyadate',
       src: '/idome/img_miyadate-small.webp',
       color: '#fc1f1f',
+      pic: memberPics['miyadate'],
     },
     {
       key: 'meguro',
       src: '/idome/img_meguro-small.webp',
       color: '#444',
+      pic: memberPics['meguro'],
     },
     {
       key: 'sakuma',
       src: '/idome/img_sakuma-small.webp',
       color: '#ed5193',
+      pic: memberPics['sakuma'],
     },
   ];
 
-  const [member, setMember] = useState<{ key?: string, src?: string, color?: string }>({});
+  const [member, setMember] = useState<Member>({});
   const handleChangeMember = (e: ChangeEvent<HTMLInputElement>) => {
     const key = e.target.value;
     setMember(members.find(v => v.key === key));
   };
+
+  const [name, setName] = useState('');
+  const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value;
+    setName(val);
+  }
 
   return (
     <>
@@ -116,10 +133,12 @@ const IdomePage: NextPage = () => {
                 className={IdomeStyle.generator_input}
                 type="text" required
                 minLength={1} maxLength={15} size={30}
-                placeholder='英字15文字以内で入力してください' />
+                placeholder='英字15文字以内で入力してください'
+                onChange={onInputChange}
+              />
             </div>
             <div className='canvas-preview w-1/2 flex justify-center items-center'>
-              <GeneratorPreview color={member?.color}/>
+              <GeneratorPreview member={member} input={name} />
             </div>
           </div>
         </div>

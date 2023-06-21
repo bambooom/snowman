@@ -17,3 +17,10 @@ export interface SharedModalProps {
   navigation: boolean
   direction?: number
 }
+
+export interface Member {
+  key?: string
+  src?: string
+  color?: string
+  pic?: string // picture base64
+}

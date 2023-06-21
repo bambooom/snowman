@@ -12,3 +12,17 @@
   line-height: 1;
   text-transform: uppercase;
 }
+
+.input_text_container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  height: 2.25rem;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  font-weight: bold;
+}
+
+.input_text_container img {
+  height: 1.5rem;
+}
